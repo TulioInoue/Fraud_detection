@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import joblib as jb
+import sklearn
+import numpy
 
 model = jb.load("./fraud_detector.joblib")
 
@@ -135,10 +137,7 @@ if button:
         answer = "legit"
     else: answer = "fraud"
 
-    print(dataset)
-
     st.write(
         f"Transaction status: {answer}"
     )
-    # print(prediction)
 
